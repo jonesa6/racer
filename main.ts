@@ -309,6 +309,10 @@ function loadingMenu () {
     pauseUntil(() => d)
    
 }
+if (blockSettings.exists("bugfix")) {} else {
+    blockSettings.writeNumber("bugfix", 0)
+    game.reset()
+}
 loadingMenu()
 let textSprite: TextSprite = null
 let car2: Sprite = null
