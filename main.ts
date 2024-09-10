@@ -309,7 +309,10 @@ function loadingMenu () {
     pauseUntil(() => d)
    
 }
+
+controller.menu.onEvent(ControllerButtonEvent.Pressed, function() {}) //stop user from opening the menu and breaking the menu & the game
 loadingMenu()
+game.stats = true
 let textSprite: TextSprite = null
 let car2: Sprite = null
 let car1: Sprite = null
