@@ -309,7 +309,12 @@ function loadingMenu () {
     pauseUntil(() => d)
    
 }
-
+ if (blockSettings.exists("bestscore2")) {
+     if (blockSettings.readNumber("bestscore2")< 4  ) {
+    blockSettings.remove("bestscore2")
+}
+       
+ }
 controller.menu.onEvent(ControllerButtonEvent.Pressed, function() {}) //stop user from opening the menu and breaking the menu & the game
 loadingMenu()
 game.stats = true
