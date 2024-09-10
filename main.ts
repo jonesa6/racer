@@ -587,6 +587,7 @@ timer.after(500 * 5, function () {
     let textSprite2 = textsprite.create("", 14, 1)
     textSprite2.setPosition(0, 23)
     textSprite2.setFlag(SpriteFlag.RelativeToCamera, true)
+    if (mySprite.vx==0) {throw "failed to initGame"}
     if (blockSettings.exists("bestscore")&&!(m2==1)) {
         besttime = blockSettings.readNumber("bestscore")
     } else if (!(m2==1)) {
